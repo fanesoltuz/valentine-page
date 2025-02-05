@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffe6e6;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0,
+                                      0.1);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        #noBtn {
+            background-color: red;
+            color: white;
+        }
+
+        #yesBtn {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vrei să fii partenera mea de VDay?</h1>
+        <div class="buttons">
+            <button id="noBtn">Nu</button>
+            <button id="yesBtn">Da</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("noBtn").addEventListener("mouseover", function() {
+            let yesBtn = document.getElementById("yesBtn");
+            let currentSize = window.getComputedStyle(yesBtn).fontSize;
+            let newSize = parseFloat(currentSize) * 1.3 + "px"; // Mărește butonul cu 30%
+            yesBtn.style.fontSize = newSize;
+        });
+    </script>
+</body>
+</html>
